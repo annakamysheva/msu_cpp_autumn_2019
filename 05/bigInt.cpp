@@ -282,64 +282,6 @@ BigInt BigInt::operator+(const BigInt& val) const
 	}
 }
 
-// BigInt BigInt::operator+(const BigInt& val) const {
-//         if (sign != val.sign) {
-//             if (sign)
-//                 return -val;
-//             else 
-//                 return val-(-(*this));
-//         }
-        
-//         const BigInt* first = this;
-//         const BigInt* second = &val;
-        
-//         if (this -> size < val.size) {
-//             first = &val;
-//             second = this;
-//         }
-        
-//         BigInt result(*first);
-        
-//         uint16_t* a = result.data;
-//         uint16_t* b = second->data;
-//         unsigned c, over = 0;
-//         size_t a_left = result.size;
-//         size_t b_left = second->size;
-        
-//         while (a_left and b_left) {
-//             c = *a - '0' + *b - '0' + over;
-//             over = c / 10;
-//             c %= 10;
-                
-//             *a = c + '0';
-                
-//             a++;
-//             b++;
-                
-//             a_left--;
-//             b_left--;
-//         }
-            
-//         while (a_left) {
-//             c = *a - '0' + over;
-//             over = c / 10;
-//             c %= 10;
-                
-//             *a = c + '0'; 
-//             a++;
-//             a_left--;
-//         }
-            
-//         if (over) {
-//             result.size++;
-            
-//             *a = over + '0';
-//         }
-        
-//         return result;
-        
-//     }
-
 BigInt BigInt::operator-(const BigInt& val) const
 {
     return *this+(-val);
